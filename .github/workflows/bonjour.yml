@@ -12,4 +12,4 @@ jobs:
         id: read_file
       - uses: Code-Hex/neo-cowsay-action@v1
         with:
-          message: steps.read_file.outputs
+          message: ${{ steps.readfile.outputs.content }}

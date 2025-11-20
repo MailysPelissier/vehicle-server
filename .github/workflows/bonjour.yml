@@ -9,7 +9,7 @@ jobs:
       - uses: juliangruber/read-file-action@v1
         with:
           path: ./README.md
-        id: read_file
+        id: readfile
       - uses: Code-Hex/neo-cowsay-action@v1
         with:
           message: ${{ steps.readfile.outputs.content }}

@@ -1,0 +1,12 @@
+name: vehicle_workflow
+on:
+  - push
+jobs:
+  ci:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+      - run: node --version
+      - run: npm run build
+      - run: ls dist/
